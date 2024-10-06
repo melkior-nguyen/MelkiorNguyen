@@ -1,0 +1,127 @@
+.getInTouchButton {
+  height         : 24px;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  gap            : 4px;
+  padding        : 0px 8px;
+  border-radius  : 9999px;
+  transition     : var(--transition);
+  position       : relative;
+  overflow       : hidden;
+}
+
+.getInTouchButton:hover {
+  scale: 1.05;
+}
+
+.getInTouchButton::before {
+  content  : "";
+  position : absolute;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+
+  width           : calc(100% - 2px);
+  height          : calc(100% - 2px);
+  background-color: black;
+  border-radius   : 9999px;
+  z-index         : 0;
+}
+
+.getInTouchButton .dots_border {
+  position : absolute;
+  top      : 50%;
+  left     : 50%;
+  transform: translateY(-100%);
+
+  width     : 50%;
+  height    : 120%;
+  background: linear-gradient(180deg, transparent 40%, var(--white));
+
+  z-index         : -10;
+  animation       : rotate 2s linear infinite;
+  transform-origin: left top;
+}
+
+/* .getInTouchButton:hover .dots_border {
+  background: linear-gradient(180deg, transparent 40%, cyan);
+} */
+
+@keyframes rotate {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.getInTouchButton span {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  gap            : 4px;
+  z-index        : 10;
+}
+
+.getInTouchButton:hover path {
+  transform-origin: center;
+  animation       : rotate2 1s linear, colorize 1s infinite 1s;
+}
+
+@keyframes rotate2 {
+  10% {
+    rotate: -90deg;
+  }
+  25% {
+    rotate: 40deg;
+  }
+  35% {
+    rotate: -35deg;
+  }
+  40% {
+    rotate: 30deg;
+  }
+  45% {
+    rotate: -25deg;
+  }
+  50% {
+    rotate: 20deg;
+  }
+  55% {
+    rotate: -15deg;
+  }
+  60% {
+    rotate: 10deg;
+  }
+  65% {
+    rotate: -5deg;
+  }
+  70% {
+    rotate: 4deg;
+  }
+  75% {
+    rotate: -3deg;
+  }
+  80% {
+    rotate: 2deg;
+  }
+  85% {
+    rotate: -1deg;
+  }
+  100% {
+    rotate: 0 
+  }
+}
+
+@keyframes colorize {
+  0% {
+    color: currentColor;
+  }
+
+  50% {
+    color: cyan
+  }
+
+  100% {
+    color: currentColor
+  }
+}
