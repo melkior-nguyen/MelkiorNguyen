@@ -3,6 +3,7 @@
 :root {
   --transition      : 0.2s ease-in-out;
   --white           : #f0f3fa;
+  --black           : #0B1215;
   --gray-color      : #9fa2a8;
   --gray-hover-color: #D4D6D8;
 }
