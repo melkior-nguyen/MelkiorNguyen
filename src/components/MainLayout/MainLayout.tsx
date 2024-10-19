@@ -10,7 +10,7 @@ const MainLayout: React.FC<ParentComponentProps> = ({ children }) => {
     <main
       className="w-full h-screen flex"
       style={{
-        backgroundColor: !isIntroShowed ? "#000000" : "transparent",
+        backgroundColor: !isIntroShowed ? "#212121" : "transparent",
         backgroundImage: isIntroShowed ? `url(${darkBg})` : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",

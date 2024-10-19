@@ -57,7 +57,7 @@ const AnimatedText = ({ onAnimationComplete }: AnimatedTextProps) => {
   }, [animate]);
 
   return (
-    <motion.div ref={scope} className="border w-full h-full relative">
+    <motion.div ref={scope} className="w-full h-full relative">
       <motion.div
         id="Hello"
         variants={textVariant}

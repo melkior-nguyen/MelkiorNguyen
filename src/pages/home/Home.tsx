@@ -10,7 +10,7 @@ const Home = () => {
       {!isIntroShowed ? (
         <AppIntro />
       ) : (
-        <motion.section className="w-full h-full flex justify-center items-center border">
+        <motion.section className="w-full h-full flex justify-center items-center">
           Home
         </motion.section>
       )}

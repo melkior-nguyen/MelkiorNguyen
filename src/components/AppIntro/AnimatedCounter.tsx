@@ -23,7 +23,7 @@ const NumberCounter = ({
   useLayoutEffect(() => {
     scope.current.textContent = `${from}%`
     const animation = animate(from, to, {
-      duration: 2,
+      duration: 1,
       ease: "easeInOut",
       ...animatedOptions,
       onUpdate: (value) => {
