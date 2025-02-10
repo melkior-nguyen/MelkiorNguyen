@@ -1,8 +1,4 @@
-import {
-  KeyframeOptions,
-  motion,
-  useAnimate,
-} from "framer-motion";
+import { KeyframeOptions, motion, useAnimate } from "framer-motion";
 import React, { useLayoutEffect } from "react";
 
 type NumberCounterProps = {
@@ -18,10 +14,10 @@ const NumberCounter = ({
   animatedOptions,
   onAnimationComplete,
 }: NumberCounterProps) => {
-  const [scope, animate] = useAnimate()
+  const [scope, animate] = useAnimate();
 
   useLayoutEffect(() => {
-    scope.current.textContent = `${from}%`
+    scope.current.textContent = `${from}%`;
     const animation = animate(from, to, {
       duration: 1,
       ease: "easeInOut",
@@ -37,7 +33,7 @@ const NumberCounter = ({
     return () => {
       animation.stop();
     };
-  }, [scope]);
+  }, [scope, from, to, onAnimationComplete, animate, animatedOptions]);
 
   return (
     <motion.p

@@ -46,7 +46,6 @@ const AnimatedText = ({ onAnimationComplete }: AnimatedTextProps) => {
           onComplete: async () => {
             await animate(scope.current, {
               opacity: 0,
-              duration: 1,
             });
             onAnimationComplete();
           },
@@ -54,7 +53,7 @@ const AnimatedText = ({ onAnimationComplete }: AnimatedTextProps) => {
       );
     };
     handleAnimate();
-  }, [animate]);
+  }, [animate, onAnimationComplete, scope]);
 
   return (
     <motion.div ref={scope} className="w-full h-full relative">
@@ -64,7 +63,7 @@ const AnimatedText = ({ onAnimationComplete }: AnimatedTextProps) => {
         initial="helloHidden"
         className=" select-none h-max absolute top-1/2 left-1/2 flex justify-center items-end"
       >
-        <span className="text-9xl font-extrabold leading-[82px] align-bottom p-0 m-0">
+        <span className="text-5xl md:text-9xl font-extrabold leading-[40px] md:leading-[82px] align-bottom p-0 m-0">
           Hello
         </span>
       </motion.div>
@@ -74,7 +73,7 @@ const AnimatedText = ({ onAnimationComplete }: AnimatedTextProps) => {
         initial="imHidden"
         className=" select-none h-max absolute top-1/2 left-1/2 flex justify-center items-end"
       >
-        <span className="text-4xl font-bold leading-[24px] align-bottom p-0 m-0">
+        <span className="text-2xl md:text-4xl font-bold leading-[24px] align-bottom p-0 m-0">
           I'm a
         </span>
       </motion.div>

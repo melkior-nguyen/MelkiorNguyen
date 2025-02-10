@@ -1,0 +1,18 @@
+.animation_svg path {
+  fill: transparent;
+  stroke: #fafafa;
+  stroke-width: 0.5;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: textAni 2s ease-in-out 1 forwards;
+}
+
+@keyframes textAni {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  100% {
+    fill: #fafafa;
+    stroke-dashoffset: 0;
+  }
+}

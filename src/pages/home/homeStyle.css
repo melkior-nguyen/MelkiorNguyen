@@ -1,0 +1,27 @@
+.home_avatar {
+  filter: grayscale(0.5);
+  object-fit: contain;
+  object-position: center;
+  -webkit-mask-image: url("../../assets/splash.webp");
+  mask-image: url("../../assets/splash.webp");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  animation: scale 1s linear;
+}
+
+@keyframes scale {
+  from {
+    -webkit-mask-size: 75%;
+    mask-size: 75%;
+    opacity: 0;
+  }
+  to {
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    opacity: 1;
+  }
+}

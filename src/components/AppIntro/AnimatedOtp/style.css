@@ -1,0 +1,18 @@
+.otp_input {
+  color: var(--gray-color-focus);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: transparent;
+  border: 1px solid var(--gray-color);
+  border-radius: 6px;
+  width: 32px !important;
+  aspect-ratio: 4/5;
+  box-shadow: -1px -1px 4px 0 #000, 1px 1px 4px 0 #333;
+}
+
+.otp_input::-webkit-outer-spin-button,
+.otp_input::-webkit-inner-spin-button {
+  appearance: none;
+}

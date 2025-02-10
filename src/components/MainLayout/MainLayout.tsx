@@ -8,10 +8,11 @@ const MainLayout: React.FC<ParentComponentProps> = ({ children }) => {
   console.log(isIntroShowed)
   return (
     <main
-      className="w-full h-screen flex"
+      className="w-full h-screen flex justify-center items-center p-[68px]"
       style={{
-        backgroundColor: !isIntroShowed ? "#212121" : "transparent",
-        backgroundImage: isIntroShowed ? `url(${darkBg})` : "none",
+        // backgroundColor: !isIntroShowed ? "#212121" : "transparent",
+        // backgroundImage: isIntroShowed ? `url(${darkBg})` : "none",
+        backgroundImage: `url(${darkBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
